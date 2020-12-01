@@ -36,12 +36,7 @@ class _MainPageState extends State<MainPage> {
               bottomNavBarIndex = index;
             });
           },
-          children: <Widget>[
-            MoviePage(),
-            Center(
-              child: Text("My Tickets"),
-            )
-          ],
+          children: <Widget>[MoviePage(), TicketPage()],
         ),
         createCustomBottomNavbar(),
         Align(
@@ -61,7 +56,7 @@ class _MainPageState extends State<MainPage> {
                 ),
                 onPressed: () {
                   context.bloc<UserBloc>().add(SignOut());
-                  AuthServices.signOut();           
+                  AuthServices.signOut();
                 }),
           ),
         )
