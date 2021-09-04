@@ -70,21 +70,23 @@ class OnSelectSchedulePage extends PageState {
 }
 
 class OnSelectSeatPage extends PageState {
-  final Ticket ticket;
+  final TicketDB ticket;
+  final MovieDetail movieDetail;
 
-  OnSelectSeatPage(this.ticket);
+  OnSelectSeatPage(this.ticket, this.movieDetail);
 
   @override
   List<Object> get props => [ticket];
 }
 
 class OnCheckoutPage extends PageState {
-  final Ticket ticket;
+  final TicketDB ticket;
+  final MovieDetail movieDetail;
 
-  OnCheckoutPage(this.ticket);
+  OnCheckoutPage(this.ticket, this.movieDetail);
 
   @override
-  List<Object> get props => [ticket];
+  List<Object> get props => [ticket, movieDetail];
 }
 
 class OnSuccessPage extends PageState {
@@ -107,6 +109,11 @@ class OnTicketDetailPage extends PageState {
 }
 
 class OnProfilePage extends PageState {
+  @override
+  List<Object> get props => [];
+}
+
+class OnHome extends PageState {
   @override
   List<Object> get props => [];
 }

@@ -1,9 +1,10 @@
 part of 'pages.dart';
 
 class SelectSeatPage extends StatefulWidget {
-  final Ticket ticket;
+  final TicketDB ticket;
+  final MovieDetail movieDetail;
 
-  SelectSeatPage(this.ticket);
+  SelectSeatPage(this.ticket, this.movieDetail);
 
   @override
   _SelectSeatPageState createState() => _SelectSeatPageState();
@@ -18,7 +19,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
         onWillPop: () async {
           context
               .bloc<PageBloc>()
-              .add(GoToSelectSchedulePage(widget.ticket.movieDetail));
+              .add(GoToSelectSchedulePage(widget.movieDetail));
 
           return;
         },
@@ -26,7 +27,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
             body: Stack(
           children: <Widget>[
             Container(
-              color: accentColor1,
+              color: mainColor,
             ),
             SafeArea(
               child: Container(color: Colors.white),
@@ -46,11 +47,10 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
                           child: GestureDetector(
                             onTap: () {
                               context.bloc<PageBloc>().add(
-                                  GoToSelectSchedulePage(
-                                      widget.ticket.movieDetail));
+                                  GoToSelectSchedulePage(widget.movieDetail));
                             },
                             child: Icon(
-                              Icons.arrow_back,
+                              Icons.arrow_back_ios,
                               color: Colors.black,
                             ),
                           ),
@@ -65,7 +65,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
                                   width:
                                       MediaQuery.of(context).size.width * 0.5,
                                   child: Text(
-                                    widget.ticket.movieDetail.title,
+                                    (widget.movieDetail.title == null) ? '' : widget.movieDetail.title,
                                     style: blackTextFont.copyWith(fontSize: 20),
                                     maxLines: 2,
                                     overflow: TextOverflow.clip,
@@ -79,8 +79,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
                                       image: DecorationImage(
                                           image: NetworkImage(imageBaseURL +
                                               'w154' +
-                                              widget.ticket.movieDetail
-                                                  .posterPath),
+                                              widget.movieDetail.posterPath),
                                           fit: BoxFit.cover)))
                             ],
                           ),
@@ -114,9 +113,25 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
                           ),
                           onPressed: selectedSeats.length > 0
                               ? () {
-                                  context.bloc<PageBloc>().add(GoToCheckoutPage(
-                                      widget.ticket
-                                          .copyWith(seats: selectedSeats)));
+                                  context.bloc<PageBloc>().add(
+                                        GoToCheckoutPage(
+                                            TicketDB(
+                                                id: int.tryParse(
+                                                    randomAlphaNumeric(1)
+                                                        .toUpperCase()),
+                                                movieDetail:
+                                                    widget.movieDetail.title,
+                                                theater: widget.ticket.theater,
+                                                time: widget.ticket.time,
+                                                bookingCode:
+                                                    randomAlphaNumeric(12)
+                                                        .toUpperCase(),
+                                                seats: selectedSeats[0].toString(),
+                                                totalSeats: selectedSeats.length,
+                                                name: widget.ticket.name,
+                                                totalPrice: null),
+                                            MovieDetail(widget.movieDetail)),
+                                      );
                                 }
                               : null),
                     ),
@@ -130,7 +145,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
   }
 
   Column generateSeats() {
-    List<int> numberofSeats = [3, 5, 5, 5, 5];
+    List<int> numberofSeats = [2, 4, 5, 5, 6];
     List<Widget> widgets = [];
 
     for (int i = 0; i < numberofSeats.length; i++) {
@@ -140,7 +155,7 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
             numberofSeats[i],
             (index) => Padding(
                   padding: EdgeInsets.only(
-                      right: index < numberofSeats[i] - 1 ? 16 : 0, bottom: 16),
+                      right: index < numberofSeats[i] - 1 ? 10 : 0, bottom: 10),
                   child: SelectableBox(
                     "${String.fromCharCode(i + 65)}${index + 1}",
                     width: 40,
@@ -154,12 +169,12 @@ class _SelectSeatPageState extends State<SelectSeatPage> {
                       setState(() {
                         if (selectedSeats.contains(seatNumber)) {
                           selectedSeats.remove(seatNumber);
-                        } else {
+                        }  else {
                           selectedSeats.add(seatNumber);
                         }
                       });
                     },
-                    isEnabled: index != 0,
+                    isEnabled: index == 5,
                   ),
                 )),
       ));

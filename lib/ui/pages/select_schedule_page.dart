@@ -14,6 +14,7 @@ class _SelectSchedulePageState extends State<SelectSchedulePage> {
   DateTime selectedDate;
   int selectedTime;
   Theater selectedTheater;
+  String selectedTheaterDB;
   bool isValid = false;
 
   @override
@@ -37,7 +38,7 @@ class _SelectSchedulePageState extends State<SelectSchedulePage> {
         body: Stack(
           children: <Widget>[
             Container(
-              color: accentColor1,
+              color: mainColor,
             ),
             SafeArea(
               child: Container(
@@ -115,19 +116,27 @@ class _SelectSchedulePageState extends State<SelectSchedulePage> {
                         onPressed: () {
                           if (isValid) {
                             context.bloc<PageBloc>().add(GoToSelectSeatPage(
-                                Ticket(
-                                    widget.movieDetail,
-                                    selectedTheater,
-                                    DateTime(
-                                        selectedDate.year,
-                                        selectedDate.month,
-                                        selectedDate.day,
-                                        selectedTime),
-                                    randomAlphaNumeric(12).toUpperCase(),
-                                    null,
-                                    (userState as UserLoaded).user.name,
-                                    null)));
+                                TicketDB(
+                                    id: 
+                                        int.tryParse(randomAlpha(1)),
+                                    movieDetail: widget.movieDetail.title,
+                                    theater: selectedTheater.name,
+                                    time: DateTime(
+                                            selectedDate.year,
+                                            selectedDate.month,
+                                            selectedDate.day,
+                                            selectedTime)
+                                        .toString(),
+                                    bookingCode:
+                                        randomAlphaNumeric(12).toUpperCase(),
+                                    seats: null,
+                                    name: (userState as UserLoaded).user.name,
+                                    totalSeats: null,
+                                    totalPrice: null),
+                                MovieDetail(widget.movieDetail)));
+                                print(TicketDB().toMap());
                           }
+                          print(selectedTheater);
                         },
                       ),
                     )),

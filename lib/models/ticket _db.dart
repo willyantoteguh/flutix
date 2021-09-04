@@ -1,19 +1,28 @@
 part of 'models.dart';
 
-class Ticket extends DataModel {
-
+class TicketDB extends DataModel {
+  static String table = 'newticket';
 
   int id;
-  MovieDetail movieDetail;
-  Theater theater;
-  DateTime time;
+  String movieDetail;
+  String theater;
+  String time;
   String bookingCode;
-  List<String> seats;
+  String seats;
   String name;
-  int totalPrice;
+  int totalSeats;
+  double totalPrice;
 
-  Ticket(
-     {this.id, this.movieDetail, this.theater, this.time, this.bookingCode, this.seats, this.name, this.totalPrice}); //constructor
+  TicketDB(
+      {this.id,
+      this.movieDetail,
+      this.theater,
+      this.time,
+      this.bookingCode,
+      this.seats,
+      this.name,
+      this.totalSeats,
+      this.totalPrice}); //constructor
 
   // Ticket copyWith(
   //         //method dengan this ambil perubahan data
@@ -35,18 +44,18 @@ class Ticket extends DataModel {
   //         name ?? this.name,
   //         totalPrice ?? this.totalPrice);
 
-  String get seatsInString {
-    String s = '';
+  // String get seatsInString {
+  //   String s = '';
 
-    for (var seat in seats) {
-      s += seat + ((seat != seats.last) ? ', ' : '');
-    }
+  //   for (var seat in seats) {
+  //     s += seat + ((seat != seats.last) ? ', ' : '');
+  //   }
 
-    return s;
-  }
+  //   return s;
+  // }
 
-  static Ticket fromMap(Map<String, dynamic> map) {
-    return Ticket(
+  static TicketDB fromMap(Map<String, dynamic> map) {
+    return TicketDB(
         id: map['id'],
         movieDetail: map['movieDetail'],
         theater: map['theater'],
@@ -54,6 +63,7 @@ class Ticket extends DataModel {
         bookingCode: map['bookingCode'],
         seats: map['seats'],
         name: map['name'],
+        totalSeats: map['totalSeats'],
         totalPrice: map['totalPrice']);
   }
 
@@ -66,6 +76,7 @@ class Ticket extends DataModel {
       'bookingCode': bookingCode,
       'seats': seats,
       'name': name,
+      'totalSeats': totalSeats,
       'totalPrice': totalPrice
     };
 

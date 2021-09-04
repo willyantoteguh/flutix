@@ -1,0 +1,172 @@
+Restarted application in 1,866ms.
+I/BiChannelGoogleApi( 7457): [FirebaseAuth: ] getGoogleApiForMethod() returned Gms: com.google.firebase.auth.api.internal.zzaq@ce4636c
+W/DynamiteModule( 7457): Local module descriptor class for com.google.firebase.auth not found.
+I/FirebaseAuth( 7457): [FirebaseAuth:] Preparing to create service connection to gms implementation
+D/FirebaseAuth( 7457): Notifying id token listeners about user ( 7OOBjxtAD2M8TmbI0snfdf07fvA2 ).
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 621 downY 575 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=621.0, y[0]=575.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242497928, downTime=242497928, deviceId=6, source=0x1002, displayId=0 }
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 414 downY 1466 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=414.0, y[0]=1466.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242500367, downTime=242500367, deviceId=6, source=0x1002, displayId=0 }
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 495 downY 1377 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=495.0, y[0]=1377.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242501837, downTime=242501837, deviceId=6, source=0x1002, displayId=0 }
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 589 downY 1042 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=589.0, y[0]=1042.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242502604, downTime=242502604, deviceId=6, source=0x1002, displayId=0 }
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 377 downY 1452 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=377.0, y[0]=1452.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242503206, downTime=242503206, deviceId=6, source=0x1002, displayId=0 }
+I/flutter ( 7457): Theater
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 608 downY 848 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=608.0, y[0]=848.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242505863, downTime=242505863, deviceId=6, source=0x1002, displayId=0 }
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 372 downY 1134 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=372.0, y[0]=1134.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242506664, downTime=242506664, deviceId=6, source=0x1002, displayId=0 }
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 431 downY 1176 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=431.0, y[0]=1176.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242508368, downTime=242508368, deviceId=6, source=0x1002, displayId=0 }
+
+════════ Exception caught by gesture ═══════════════════════════════════════════
+The following NoSuchMethodError was thrown while handling a gesture:
+The method 'validate' was called on null.
+Receiver: null
+Tried calling: validate()
+
+When the exception was thrown, this was the stack
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:51:5)
+#1      _CheckoutPageState.validateAndSave
+#2      _CheckoutPageState.build.<anonymous closure>.<anonymous closure>
+#3      _InkResponseState._handleTap
+#4      _InkResponseState.build.<anonymous closure>
+...
+Handler: "onTap"
+Recognizer: TapGestureRecognizer#ecff5
+    debugOwner: GestureDetector
+    state: ready
+    won arena
+    finalPosition: Offset(215.5, 588.0)
+    finalLocalPosition: Offset(160.5, 18.0)
+    button: 1
+    sent tap down
+════════════════════════════════════════════════════════════════════════════════
+Reloaded 2 of 866 libraries in 1,070ms.
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 418 downY 1123 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=418.0, y[0]=1123.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242756495, downTime=242756495, deviceId=6, source=0x1002, displayId=0 }
+
+════════ Exception caught by gesture ═══════════════════════════════════════════
+The following NoSuchMethodError was thrown while handling a gesture:
+The method 'validate' was called on null.
+Receiver: null
+Tried calling: validate()
+
+When the exception was thrown, this was the stack
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:51:5)
+#1      _CheckoutPageState.validateAndSave
+#2      _CheckoutPageState.build.<anonymous closure>.<anonymous closure>
+#3      _InkResponseState._handleTap
+#4      _InkResponseState.build.<anonymous closure>
+...
+Handler: "onTap"
+Recognizer: TapGestureRecognizer#3e099
+    debugOwner: GestureDetector
+    state: ready
+    won arena
+    finalPosition: Offset(209.0, 561.5)
+    finalLocalPosition: Offset(89.0, 27.5)
+    button: 1
+    sent tap down
+════════════════════════════════════════════════════════════════════════════════
+Reloaded 2 of 866 libraries in 917ms.
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 395 downY 1132 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=395.0, y[0]=1132.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242794583, downTime=242794583, deviceId=6, source=0x1002, displayId=0 }
+
+════════ Exception caught by gesture ═══════════════════════════════════════════
+The following NoSuchMethodError was thrown while handling a gesture:
+The method 'validate' was called on null.
+Receiver: null
+Tried calling: validate()
+
+When the exception was thrown, this was the stack
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:51:5)
+#1      _CheckoutPageState.validateAndSave
+#2      _CheckoutPageState.build.<anonymous closure>.<anonymous closure>
+#3      _InkResponseState._handleTap
+#4      _InkResponseState.build.<anonymous closure>
+...
+Handler: "onTap"
+Recognizer: TapGestureRecognizer#3e099
+    debugOwner: GestureDetector
+    state: ready
+    won arena
+    finalPosition: Offset(197.5, 566.0)
+    finalLocalPosition: Offset(77.5, 32.0)
+    button: 1
+    sent tap down
+════════════════════════════════════════════════════════════════════════════════
+Reloaded 2 of 866 libraries in 1,082ms.
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 392 downY 1130 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=392.0, y[0]=1130.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242829195, downTime=242829195, deviceId=6, source=0x1002, displayId=0 }
+I/flutter ( 7457): {id: null, movieDetail: MovieDetail, theater: Theater, time: 2021-09-03 12:00:00.000, bookingCode: 83GK14150N27, seats: [D5], name: Ngolo kante, totalPrice: null}
+I/flutter ( 7457): *** WARNING ***
+I/flutter ( 7457):
+I/flutter ( 7457): Invalid argument MovieDetail with type MovieDetail.
+I/flutter ( 7457): Only num, String and Uint8List are supported. See https://github.com/tekartik/sqflite/blob/master/sqflite/doc/supported_types.md for details
+I/flutter ( 7457):
+I/flutter ( 7457): This will throw an exception in the future. For now it is displayed once per type.
+I/flutter ( 7457):
+I/flutter ( 7457):
+I/flutter ( 7457): *** WARNING ***
+I/flutter ( 7457):
+I/flutter ( 7457): Invalid argument Theater with type Theater.
+I/flutter ( 7457): Only num, String and Uint8List are supported. See https://github.com/tekartik/sqflite/blob/master/sqflite/doc/supported_types.md for details
+I/flutter ( 7457):
+I/flutter ( 7457): This will throw an exception in the future. For now it is displayed once per type.
+I/flutter ( 7457):
+I/flutter ( 7457):
+I/flutter ( 7457): *** WARNING ***
+I/flutter ( 7457):
+I/flutter ( 7457): Invalid argument 2021-09-03 12:00:00.000 with type DateTime.
+I/flutter ( 7457): Only num, String and Uint8List are supported. See https://github.com/tekartik/sqflite/blob/master/sqflite/doc/supported_types.md for details
+I/flutter ( 7457):
+I/flutter ( 7457): This will throw an exception in the future. For now it is displayed once per type.
+I/flutter ( 7457):
+I/flutter ( 7457):
+I/flutter ( 7457): *** WARNING ***
+I/flutter ( 7457):
+I/flutter ( 7457): Invalid argument [D5] with type List<String>.
+I/flutter ( 7457): Only num, String and Uint8List are supported. See https://github.com/tekartik/sqflite/blob/master/sqflite/doc/supported_types.md for details
+I/flutter ( 7457):
+I/flutter ( 7457): This will throw an exception in the future. For now it is displayed once per type.
+I/flutter ( 7457):
+I/flutter ( 7457):
+E/flutter ( 7457): [ERROR:flutter/lib/ui/ui_dart_state.cc(177)] Unhandled Exception: Invalid argument: Instance of 'MovieDetail'
+E/flutter ( 7457): #0      StandardMessageCodec.writeValue
+E/flutter ( 7457): #1      StandardMessageCodec.writeValue
+E/flutter ( 7457): #2      StandardMessageCodec.writeValue.<anonymous closure>
+E/flutter ( 7457): #3      _LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:377:8)
+E/flutter ( 7457): #4      StandardMessageCodec.writeValue
+E/flutter ( 7457): #5      StandardMethodCodec.encodeMethodCall
+E/flutter ( 7457): #6      MethodChannel._invokeMethod
+E/flutter ( 7457): #7      MethodChannel.invokeMethod
+E/flutter ( 7457): #8      invokeMethod
+E/flutter ( 7457): #9      SqfliteDatabaseFactoryImpl.invokeMethod
+E/flutter ( 7457): #10     SqfliteDatabaseMixin.invokeMethod
+E/flutter ( 7457): #11     SqfliteDatabaseMixin.safeInvokeMethod.<anonymous closure>
+E/flutter ( 7457): #12     wrapDatabaseException
+E/flutter ( 7457): #13     SqfliteDatabaseFactoryImpl.wrapDatabaseException
+E/flutter ( 7457): #14     SqfliteDatabaseMixin.safeInvokeMethod
+E/flutter ( 7457): #15     SqfliteDatabaseMixin.txnRawInsert.<anonymous closure>
+E/flutter ( 7457): #16     SqfliteDatabaseMixin.txnSynchronized.<anonymous closure>
+E/flutter ( 7457): #17     BasicLock.synchronized
+E/flutter ( 7457): #18     SqfliteDatabaseMixin.txnSynchronized
+E/flutter ( 7457): #19     SqfliteDatabaseMixin.txnWriteSynchronized
+E/flutter ( 7457): #20     SqfliteDatabaseMixin.txnRawInsert
+E/flutter ( 7457): #21     SqfliteDatabaseExecutorMixin.rawInsert
+E/flutter ( 7457): #22     SqfliteDatabaseExecutorMixin.insert
+E/flutter ( 7457): #23     DB.insert
+E/flutter ( 7457): #24     DBServices.addTransaction
+E/flutter ( 7457): <asynchronous suspension>
+E/flutter ( 7457): #25     _CheckoutPageState.build.<anonymous closure>.<anonymous closure>
+E/flutter ( 7457): #26     _InkResponseState._handleTap
+E/flutter ( 7457): #27     _InkResponseState.build.<anonymous closure>
+E/flutter ( 7457): #28     GestureRecognizer.invokeCallback
+E/flutter ( 7457): #29     TapGestureRecognizer.handleTapUp
+E/flutter ( 7457): #30     BaseTapGestureRecognizer._checkUp
+E/flutter ( 7457): #31     BaseTapGestureRecognizer.acceptGesture
+E/flutter ( 7457): #32     GestureArenaManager.sweep
+E/flutter ( 7457): #33     GestureBinding.handleEvent
+E/flutter ( 7457): #34     GestureBinding.dispatchEvent
+E/flutter ( 7457): #35     RendererBinding.dispatchEvent
+E/flutter ( 7457): #36     GestureBinding._handlePointerEvent
+E/flutter ( 7457): #37     GestureBinding._flushPointerEventQueue
+E/flutter ( 7457): #38     GestureBinding._handlePointerDataPacket
+E/flutter ( 7457): #39     _rootRunUnary (dart:async/zone.dart:1206:13)
+E/flutter ( 7457): #40     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+E/flutter ( 7457): #41     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1
+Reloaded 2 of 866 libraries in 1,015ms.
+D/ColorViewRootUtil( 7457): nav bar mode ignore false downX 403 downY 1154 mScreenHeight 1600 mScreenWidth 720 mStatusBarHeight 36 globalScale 1.125 nav mode 0 rotation 0 event MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=403.0, y[0]=1154.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=242933139, downTime=242933139, deviceId=6, source=0x1002, displayId=0 }
+I/flutter ( 7457): {id: null, movieDetail: MovieDetail, theater: Theater, time: 2021-09-03 12:00:00.000, bookingCode: 83GK14150N27, seats: [D5], name: Ngolo kante, totalPrice: null}

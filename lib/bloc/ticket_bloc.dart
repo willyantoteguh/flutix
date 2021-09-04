@@ -16,16 +16,16 @@ class TicketBloc extends Bloc<TicketEvent, TicketState> {
   Stream<TicketState> mapEventToState(
     TicketEvent event,
   ) async* {
-    if (event is BuyTicket) {
-      await TicketServices.saveTicket(event.userID, event.ticket);
+    // if (event is BuyTicket) {
+    //   await TicketServices.saveTicket(event.userID, event.ticket);
 
-      List<Ticket> tickets = state.tickets + [event.ticket];
+    //   List<Ticket> tickets = state.tickets + [event.ticket];
 
-      yield TicketState(tickets);
-    } else if (event is GetTickets) {
-      List<Ticket> tickets = await TicketServices.getTickets(event.userID);
+    //   yield TicketState(tickets);
+    // } else if (event is GetTickets) {
+    //   List<Ticket> tickets = await TicketServices.getTickets(event.userID);
 
-      yield TicketState(tickets);
-    }
+    //   yield TicketState(tickets);
+    // }
   }
 }

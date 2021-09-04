@@ -7,15 +7,17 @@ class MovieServices {
 
     client ??= http.Client();
 
+    // try {} catch (error) {
+    //   print(error);
+    //   http.ClientException("message");
+    // }
     var response = await client.get(url);
-
     if (response.statusCode != 200) {
       return [];
     }
 
     var data = json.decode(response.body);
     List result = data['results']; // hanya ambil data result saja dari API
-
     return result.map((e) => Movie.fromJson(e)).toList();
   }
 

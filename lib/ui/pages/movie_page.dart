@@ -107,7 +107,7 @@ class MoviePage extends StatelessWidget {
         height: 140,
         child: BlocBuilder<MovieBloc, MovieState>(builder: (_, movieState) {
           if (movieState is MovieLoaded) {
-            List<Movie> movies = movieState.movies.sublist(0, 10);
+            List<Movie> movies = movieState.movies.sublist(0, 6);
 
             return ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -181,7 +181,7 @@ class MoviePage extends StatelessWidget {
 
             return ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: movies.length,
+                itemCount: (movies == null)  ? 1 : movies.length,
                 itemBuilder: (_, index) => Container(
                       margin: EdgeInsets.only(
                           left: (index == 0) ? defaultMargin : 0,
